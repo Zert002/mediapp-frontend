@@ -9,12 +9,15 @@
     <mat-form-field class="example-full-width">
         <input matInput placeholder="Nombre Especialidad" required formControlName="nombre">
     </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="Descripcion" required formControlName="descripcion">
+    </mat-form-field>
 
     <button mat-raised-button color="primary" type="submit" [disabled]="espForm.invalid">
         <mat-icon>done</mat-icon>
         <span>Aceptar</span>
     </button>
-    <button mat-raised-button color="accent" routerLink='/especialidad' type="button">
+    <button mat-raised-button color="accent" routerLink='/pages/especialidad' type="button">
         <mat-icon>close</mat-icon>
         <span>Cancelar</span>
     </button>

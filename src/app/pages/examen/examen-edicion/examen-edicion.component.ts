@@ -82,7 +82,7 @@ export class ExamenEdicionComponent implements OnInit {
       });
     }
 
-    this.router.navigate(['examen']);
+    this.router.navigate(['pages/examen']);
   }
 
 }

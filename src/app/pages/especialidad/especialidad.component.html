@@ -23,6 +23,11 @@
                 <mat-cell *matCellDef="let row"> {{row.nombre}} </mat-cell>
             </ng-container>
 
+            <ng-container matColumnDef="descripcion">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> Descripcion </mat-header-cell>
+                <mat-cell *matCellDef="let row"> {{row.descripcion}} </mat-cell>
+            </ng-container>
+
             <ng-container matColumnDef="acciones">
                 <mat-header-cell *matHeaderCellDef>Acciones</mat-header-cell>
                 <mat-cell *matCellDef="let row">
@@ -43,6 +48,6 @@
         <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
     </div>
 </div>
-<button mat-fab color="accent" style="float: right; margin-right: 20px" routerLink='/especialidad/nuevo'>
+<button mat-fab color="accent" style="float: right; margin-right: 20px" routerLink='/pages/especialidad/nuevo'>
     <mat-icon>create</mat-icon>
 </button>

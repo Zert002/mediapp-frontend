@@ -68,7 +68,7 @@ export class PacienteEdicionComponent implements OnInit {
       });
     }
 
-    this.router.navigate(['paciente']);
+    this.router.navigate(['pages/paciente']);
 
   }
 

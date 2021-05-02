@@ -14,6 +14,8 @@ import { Not403Component } from './not403/not403.component';
 import { PacienteEdicionComponent } from './paciente/paciente-edicion/paciente-edicion.component';
 import { PacienteComponent } from './paciente/paciente.component';
 import { ReporteComponent } from './reporte/reporte.component';
+import { SignoEdicionComponent } from './signo/signo-edicion/signo-edicion.component';
+import { SignoComponent } from './signo/signo.component';
 import { WizardComponent } from './wizard/wizard.component';
 
 export const routes: Routes = [
@@ -34,6 +36,12 @@ export const routes: Routes = [
         path: 'especialidad', component: EspecialidadComponent, children: [
             { path: 'nuevo', component: EspecialidadEdicionComponent },
             { path: 'edicion/:id', component: EspecialidadEdicionComponent }
+        ], canActivate: [GuardService]
+    },
+    {
+        path: 'signo', component: SignoComponent, children: [
+            { path: 'nuevo', component: SignoEdicionComponent },
+            { path: 'edicion/:id', component: SignoEdicionComponent }
         ], canActivate: [GuardService]
     },
     { path: 'medico', component: MedicoComponent, canActivate: [GuardService] },

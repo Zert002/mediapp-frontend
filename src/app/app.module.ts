@@ -18,6 +18,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { JwtModule } from "@auth0/angular-jwt";
 import { environment } from 'src/environments/environment';
 import { ServerErrorsInterceptor } from './shared/server-errors.interceptor';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 export function tokenGetter() {
   return sessionStorage.getItem(environment.TOKEN_NAME);
@@ -58,6 +59,8 @@ export function tokenGetter() {
       useClass: ServerErrorsInterceptor,
       multi: true
     },
+    //Add
+    // { provide: LocationStrategy, useClass: HashLocationStrategy }
   ],
   bootstrap: [AppComponent]
 })
