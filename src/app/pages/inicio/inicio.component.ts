@@ -19,7 +19,7 @@ export class InicioComponent implements OnInit {
   ngOnInit(): void {
     const helper = new JwtHelperService();
     let token = sessionStorage.getItem(environment.TOKEN_NAME);
-
+    //console.log(token);
     const decodedToken = helper.decodeToken(token);
     this.usuario = decodedToken.user_name;
 
